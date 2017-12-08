@@ -1,11 +1,13 @@
-//your variable declarations here
+Spaceship hiroki = new Spaceship();
+
+
 public void setup() 
 {
-  //your code here
+  size(800,800);
 }
 public void draw() 
 {
-  //your code here
+  background(0);
+  hiroki.show();
+  
 }
-//IT WORKED!!
-//sup again??
