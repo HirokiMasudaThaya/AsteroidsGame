@@ -1,5 +1,5 @@
 Spaceship hiroki = new Spaceship();
-
+Asteroid kik = new Asteroid();
 Star[] starList = new Star[40];
 
 
@@ -7,16 +7,17 @@ public void setup()
 {
   size(800,800);
   for(int i=0; i<starList.length; i++){
-  starList[i] = new Star;
-  starList[i].show();
-  
-}
+  starList[i] = new Star();
+  }
   
 }
 
 public void draw() 
 {
   background(0);
+  for(int i=0; i<starList.length; i++){
+  starList[i].show();
+  }
   hiroki.show();
   hiroki.move();
 }
@@ -28,10 +29,13 @@ public void keyPressed(){
  if(key == 's') {hiroki.accelerate(-2);}
  if(key == 'e') {hiroki.setX((int)(Math.random()*600));
                  hiroki.setY((int)(Math.random()*600));
-                 hiroki.setPointDirection((int)(Math.random()*360));  }
+                 hiroki.setPointDirection((int)(Math.random()*360));  
+                 hiroki.setDirectionX(0);
+                 hiroki.setDirectionY(0);}
+ 
                  
                  
-        //DOES THIS EVEN WORK!!!!!!!!!!!
+        
                  
               
 
