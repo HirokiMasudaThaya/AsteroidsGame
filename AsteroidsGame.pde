@@ -30,6 +30,12 @@ public void keyPressed(){
                  hiroki.setY((int)(Math.random()*600));
                  hiroki.setPointDirection((int)(Math.random()*360));  }
                  
+                 
+        //DOES THIS EVEN WORK!!!!!!!!!!!
+                 
+              
+
+                 
  
   
 }
