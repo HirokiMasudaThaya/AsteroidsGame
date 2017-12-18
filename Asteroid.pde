@@ -1,5 +1,8 @@
 class Asteroid extends Floater
 {
+  private int rotateSpeed;
+  
+  
   public void setX(int x){myCenterX = x;}  
   public int getX(){return (int)myCenterX;}   
   public void setY(int y){myCenterY = y;} 
@@ -12,18 +15,30 @@ class Asteroid extends Floater
   public double getPointDirection(){return myPointDirection;}
   
   Asteroid(){
-    myCenterX = 400;
-   myCenterY = 400;
-   myDirectionX = 0;
-   myDirectionY = 0;
+   myCenterX = (int)(Math.random()*800);
+   myCenterY = (int)(Math.random()*800);
+   myDirectionX = (int)(Math.random()*11-5);
+   myDirectionY = (int)(Math.random()*11-5);
    myPointDirection = 0;
    myColor = color(255,0,0);
    corners = 5;
-   int[] xS = {13, 3, -10, -6, 1};
-   int[] yS = {0, 8, -2, 10, 12};
+   int[] xS = {30, 5, -6, -25, -10, 10};
+   int[] yS = {0, 25, 20, 0, -20, -30};
    xCorners = xS;
    yCorners = yS;
+   rotateSpeed = (int)(Math.random()*11)-5;
+  }
+  
+  public void move(){
+    myCenterX += myDirectionX;    
+    myCenterY += myDirectionY;
+    myPointDirection += rotateSpeed;
     
+    //wrap around screen
+    if(myCenterX >width){myCenterX = 0;}    
+    else if (myCenterX<0){myCenterX = width;}    
+    if(myCenterY >height){myCenterY = 0;} 
+    else if (myCenterY < 0){myCenterY = height;}   
   }
   
   

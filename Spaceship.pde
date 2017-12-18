@@ -20,7 +20,7 @@ class Spaceship extends Floater
    myColor = color(255,0,0);
    corners = 3;
    int[] xS = {10, -10, -10};
-   int[] yS = {0, 8, -8};
+   int[] yS = {0, -8, 8};
    xCorners = xS;
    yCorners = yS;
 
